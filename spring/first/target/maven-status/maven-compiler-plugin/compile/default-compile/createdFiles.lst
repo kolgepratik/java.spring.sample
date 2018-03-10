@@ -1,0 +1,6 @@
+com\kp\first\controller\JSPController.class
+com\kp\first\config\WebConfig.class
+com\kp\first\model\Customer.class
+com\kp\first\core\FirstApp.class
+com\kp\first\repository\CustomerRepository.class
+com\kp\first\controller\CusomterController.class
