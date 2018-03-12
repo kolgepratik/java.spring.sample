@@ -20,14 +20,14 @@ import org.springframework.web.bind.annotation.RestController;
             sb.append(customer.toString());
         }
 
-        return sb.toString();
+        return sb.toString().length() == 0 ? "No Customers in Database" : sb.toString();
     }
 
     @PostMapping("/") public String post() {
         this.repository.save(new Customer("Alice", "Smith"));
         this.repository.save(new Customer("Bob", "Smith"));
 
-        return "Added";
+        return "Customers Added";
     }
 
 }
