@@ -6,7 +6,7 @@
 
     <hr/>
 
-    <form action="/login">
+    <form action="/login" method="post">
         <div><input
             type="text"
             name="username"

@@ -29,6 +29,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
                 .permitAll();
 
         //@formatter:on
+
+        /*
+        http.authorizeRequests().antMatchers("/app/**").anonymous();
+        http.csrf().disable();
+        */
     }
 
     @Override protected void configure(AuthenticationManagerBuilder auth) throws Exception {
