@@ -1,9 +1,12 @@
-com\kp\first\repository\ProductRepository.class
+com\kp\first\config\AppConfig.class
 com\kp\first\controller\MainController.class
 com\kp\first\config\WebConfig.class
-com\kp\first\model\Customer.class
 com\kp\first\model\Product.class
 com\kp\first\core\FirstApp.class
-com\kp\first\repository\CustomerRepository.class
 com\kp\first\controller\ProductController.class
-com\kp\first\controller\CusomterController.class
+com\kp\first\repository\ProductRepository.class
+com\kp\first\service\CustomerUserDetailsService.class
+com\kp\first\model\Customer.class
+com\kp\first\controller\CustomerController.class
+com\kp\first\repository\CustomerRepository.class
+com\kp\first\config\SecurityConfig.class

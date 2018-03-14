@@ -43,6 +43,11 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Spring Security dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
 
         <!-- Run-Time Dependencies -->
     </dependencies>

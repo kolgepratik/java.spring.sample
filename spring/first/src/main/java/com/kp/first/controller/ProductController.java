@@ -3,12 +3,9 @@ package com.kp.first.controller;
 import com.kp.first.model.Product;
 import com.kp.first.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController @RequestMapping("/product") public class ProductController {
+@RestController @RequestMapping("/app/product") public class ProductController {
 
     @Autowired private ProductRepository repository;
 
@@ -21,6 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
         }
 
         return sb.toString().length() == 0 ? "No Products in Database" : sb.toString();
+    }
+
+    @GetMapping("/{name}") public String item(@PathVariable("name") String name) {
+        Product product = this.repository.findByName(name);
+
+        return product == null ? "No Product found with the given name" : product.toString();
     }
 
     @PostMapping("/") public String post() {
