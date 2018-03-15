@@ -20,5 +20,4 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
         SpringApplication.run(FirstApp.class, args);
     }
-
 }

@@ -43,6 +43,11 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
         <!-- Spring Security dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

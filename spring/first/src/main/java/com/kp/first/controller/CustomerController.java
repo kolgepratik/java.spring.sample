@@ -1,8 +1,10 @@
 package com.kp.first.controller;
 
+import com.kp.first.config.BeanMaker;
 import com.kp.first.model.Customer;
 import com.kp.first.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController @RequestMapping("/app/customer") public class CustomerController {
 
+    @Autowired private BeanMaker beanMaker;
+
     @Autowired private CustomerRepository repository;
 
+    @Autowired ApplicationContext applicationContext;
 
     @GetMapping("/") public String get() {
         StringBuilder sb = new StringBuilder();
@@ -24,10 +29,12 @@ import org.springframework.web.bind.annotation.RestController;
     }
 
     @PostMapping("/") public String post() {
-        this.repository.save(new Customer("Alice", "Smith", new String[] {"USER"}));
-        this.repository.save(new Customer("Bob", "Smith", new String[] {"USER"}));
+        Customer customer = beanMaker._newCustomer();
+        customer.setDetails("kolgepratik", "kolgepratik", new String[] {"USER", "ADMIN"});
 
-        return "Customers Added";
+        this.repository.save(customer);
+
+        return "Customer Added";
     }
 
 }

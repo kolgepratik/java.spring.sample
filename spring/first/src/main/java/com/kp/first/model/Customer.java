@@ -1,14 +1,20 @@
 package com.kp.first.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.List;
 
-public class Customer implements UserDetails {
+@Scope(value = "prototype") @Component public class Customer implements UserDetails {
+
+    @Autowired private PasswordEncoder passwordEncoder;
 
     @Id private String id;
 
@@ -20,16 +26,16 @@ public class Customer implements UserDetails {
     private String lastName;
 
     public Customer() {
+        super();
     }
 
-    public Customer(String firstName, String lastName, String[] authorities) {
+    public void setDetails(String firstName, String lastName, String[] authorities) {
         this.username = firstName;
-        this.password = lastName;
+        this.password = passwordEncoder.encode(lastName);
+        this.authorities = AuthorityUtils.createAuthorityList(authorities);
 
         this.firstName = firstName;
         this.lastName = lastName;
-
-        this.authorities = AuthorityUtils.createAuthorityList(authorities);
     }
 
     @Override public String getUsername() {
