@@ -54,6 +54,13 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
+        <!-- For colored terminal output -->
+        <dependency>
+            <groupId>org.fusesource.jansi</groupId>
+            <artifactId>jansi</artifactId>
+            <version>1.17</version>
+        </dependency>
+
         <!-- Run-Time Dependencies -->
     </dependencies>
 
