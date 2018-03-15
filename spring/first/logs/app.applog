@@ -1,7 +1,0 @@
-[15-Mar-2018 17:13:28] [INFO] [main c.k.f.c.FirstApp:50] * [Starting FirstApp v1.0-SNAPSHOT on US-6YCWL12 with PID 12648 (C:\Users\pkk08158\Documents\pratik\code\repos\idea\spring\first\target\first.war started by pkk08158 in C:\Users\pkk08158\Documents\pratik\code\repos\idea\spring\first)]
-[15-Mar-2018 17:13:28] [INFO] [main c.k.f.c.FirstApp:652] * [No active profile set, falling back to default profiles: default]
-[15-Mar-2018 17:13:47] [INFO] [main c.k.f.c.FirstApp:59] * [Started FirstApp in 19.549 seconds (JVM running for 21.492)]
-[15-Mar-2018 17:17:18] [INFO] [main c.k.f.c.FirstApp:50] * [Starting FirstApp v1.0-SNAPSHOT on US-6YCWL12 with PID 20340 (C:\Users\pkk08158\Documents\pratik\code\repos\idea\spring\first\target\first.war started by pkk08158 in C:\Users\pkk08158\Documents\pratik\code\repos\idea\spring\first)]
-[15-Mar-2018 17:17:18] [DEBUG] [main c.k.f.c.FirstApp:53] * [Running with Spring Boot v2.0.0.RELEASE, Spring v5.0.4.RELEASE]
-[15-Mar-2018 17:17:18] [INFO] [main c.k.f.c.FirstApp:652] * [No active profile set, falling back to default profiles: default]
-[15-Mar-2018 17:17:39] [INFO] [main c.k.f.c.FirstApp:59] * [Started FirstApp in 21.759 seconds (JVM running for 23.398)]
