@@ -11,13 +11,13 @@ import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 
 @Configuration public class MongoDBConfig extends AbstractMongoConfiguration {
 
+    // mongodb://kolgepratik:kolgepratik@ds263408.mlab.com:63408/dbone
+
+    private final String DB_PASSWORD = "kolgepratik";
     private final String DB_NAME = "dbone";
     private final String DB_HOST = "ds263408.mlab.com";
     private final Integer DB_PORT = 63408;
     private final String DB_USERNAME = "kolgepratik";
-    private final String DB_PASSWORD = "kolgepratik";
-
-    // mongodb://kolgepratik:kolgepratik@ds263408.mlab.com:63408/dbone
 
     @Autowired private Mongo mongo;
 

@@ -1,12 +1,12 @@
 package com.kp.first.model;
 
+import com.kp.first.bean.GlobalBeanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Scope(value = "prototype") @Component public class Customer implements UserDetails {
 
-    @Autowired private PasswordEncoder passwordEncoder;
+    @Autowired private GlobalBeanRepository globalBeanRepository;
 
     @Id private String id;
 
@@ -31,7 +31,7 @@ import java.util.List;
 
     public void setDetails(String firstName, String lastName, String[] authorities) {
         this.username = firstName;
-        this.password = passwordEncoder.encode(lastName);
+        this.password = globalBeanRepository.passwordEncoder.encode(lastName);
         this.authorities = AuthorityUtils.createAuthorityList(authorities);
 
         this.firstName = firstName;
@@ -70,5 +70,4 @@ import java.util.List;
         return String
             .format("Customer[id=%s, firstName='%s', lastName='%s']", id, firstName, lastName);
     }
-
 }

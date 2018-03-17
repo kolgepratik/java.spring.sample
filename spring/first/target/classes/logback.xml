@@ -4,7 +4,7 @@
         <withJansi>true</withJansi>
         <encoder>
             <pattern>
-                [%d{dd-MMM-yyyy HH:mm:ss}] %red([%p]) %blue([%t %c{15}:%L]) * [%m]%n
+                [%d{dd-MMM-yyyy HH:mm:ss}] %red([%p]) %gray([%t %c{15}:%L]) * [%m]%n
             </pattern>
         </encoder>
     </appender>

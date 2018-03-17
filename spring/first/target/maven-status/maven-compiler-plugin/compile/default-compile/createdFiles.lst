@@ -1,5 +1,6 @@
 com\kp\first\config\AppConfig.class
 com\kp\first\controller\MainController.class
+com\kp\first\core\GlobalBeanRepository.class
 com\kp\first\config\WebConfig.class
 com\kp\first\model\Product.class
 com\kp\first\config\BeanConfig.class

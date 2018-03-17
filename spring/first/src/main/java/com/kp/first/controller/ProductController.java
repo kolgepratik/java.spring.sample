@@ -5,12 +5,12 @@ import com.kp.first.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController @RequestMapping("/app/product") public class ProductController {
+@RestController @RequestMapping("/app/product*") public class ProductController {
 
     @Autowired private ProductRepository repository;
 
 
-    @GetMapping("/") public String get() {
+    @GetMapping("") public String get() {
         StringBuilder sb = new StringBuilder();
 
         for (Product product : this.repository.findAll()) {
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.*;
         return product == null ? "No Product found with the given name" : product.toString();
     }
 
-    @PostMapping("/") public String post() {
+    @PostMapping("") public String post() {
         this.repository.save(new Product("Mobile", "Android Phone", 800f));
         this.repository.save(new Product("Tablet", "Latest Tablet", 300f));
 
