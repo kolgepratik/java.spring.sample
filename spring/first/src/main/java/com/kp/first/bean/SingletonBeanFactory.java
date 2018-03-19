@@ -5,10 +5,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-@Component public class GlobalBeanRepository {
+@Component public class SingletonBeanFactory {
     @Autowired public ApplicationContext applicationContext;
 
     @Autowired public PasswordEncoder passwordEncoder;
 
-    @Autowired public BeanMaker beanMaker;
+    @Autowired public BeanInstanceMaker beanInstanceMaker;
 }

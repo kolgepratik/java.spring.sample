@@ -5,9 +5,9 @@ import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component public class BeanMaker {
+@Component public class BeanInstanceMaker {
 
-    @Autowired private GlobalBeanRepository globalBeanRepository;
+    @Autowired private SingletonBeanFactory globalBeanRepository;
 
     @Autowired private ObjectFactory<Customer> customerBeanFactory;
 
@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
     }
 
     public void printBeans() {
-
         for (String bean : globalBeanRepository.applicationContext.getBeanDefinitionNames())
             System.out.println(bean);
     }

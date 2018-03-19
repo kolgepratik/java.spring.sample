@@ -1,6 +1,6 @@
 package com.kp.first.model;
 
-import com.kp.first.bean.GlobalBeanRepository;
+import com.kp.first.bean.SingletonBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.Id;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Scope(value = "prototype") @Component public class Customer implements UserDetails {
 
-    @Autowired private GlobalBeanRepository globalBeanRepository;
+    @Autowired private SingletonBeanFactory globalBeanRepository;
 
     @Id private String id;
 

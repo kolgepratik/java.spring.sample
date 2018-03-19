@@ -1,6 +1,6 @@
 package com.kp.first.controller;
 
-import com.kp.first.bean.GlobalBeanRepository;
+import com.kp.first.bean.SingletonBeanFactory;
 import com.kp.first.model.Customer;
 import com.kp.first.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController @RequestMapping("/app/customer*") public class CustomerController {
 
-    @Autowired private GlobalBeanRepository globalBeanRepository;
+    @Autowired private SingletonBeanFactory singletonBeanFactory;
 
     @Autowired private CustomerRepository repository;
 
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
     }
 
     @PostMapping("") public String post() {
-        Customer customer = globalBeanRepository.beanMaker._newCustomer();
+        Customer customer = singletonBeanFactory.beanInstanceMaker._newCustomer();
         customer.setDetails("kolgepratik", "kolgepratik", new String[] {"USER", "ADMIN"});
 
         this.repository.save(customer);
