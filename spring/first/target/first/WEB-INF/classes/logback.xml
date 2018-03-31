@@ -52,7 +52,7 @@
     </appender>
 
     <!-- Base logging configuration -->
-    <root level="debug">
+    <root level="error">
         <appender-ref ref="stdout"/>
     </root>
 

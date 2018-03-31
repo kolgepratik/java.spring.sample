@@ -40,5 +40,4 @@ import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 
         return mongo;
     }
-
 }

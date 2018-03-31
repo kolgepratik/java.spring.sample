@@ -17,8 +17,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
     @Override protected void configure(HttpSecurity http) throws Exception {
 
-        //securityOff(http);
-        securityOn(http);
+        securityOff(http);
+        //securityOn(http);
     }
 
     private void securityOn(HttpSecurity http) throws Exception {

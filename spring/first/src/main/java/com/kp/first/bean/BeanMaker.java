@@ -1,23 +1,22 @@
 package com.kp.first.bean;
 
 import com.kp.first.model.Customer;
+import com.kp.first.model.ProductPurchase;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component public class BeanMaker {
 
-    @Autowired private GlobalBeanRepository globalBeanRepository;
-
-    @Autowired private ObjectFactory<Customer> customerBeanFactory;
+    @Autowired private ObjectFactory<Customer> customerObjectFactory;
+    @Autowired private ObjectFactory<ProductPurchase> productPurchaseObjectFactory;
 
     public Customer _newCustomer() {
-        return customerBeanFactory.getObject();
+        return customerObjectFactory.getObject();
     }
 
-    public void printBeans() {
-
-        for (String bean : globalBeanRepository.applicationContext.getBeanDefinitionNames())
-            System.out.println(bean);
+    public ProductPurchase _newProductPurchase() {
+        return productPurchaseObjectFactory.getObject();
     }
+
 }
