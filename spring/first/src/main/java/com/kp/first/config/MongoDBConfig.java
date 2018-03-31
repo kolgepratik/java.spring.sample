@@ -11,13 +11,7 @@ import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 
 @Configuration public class MongoDBConfig extends AbstractMongoConfiguration {
 
-    // mongodb://kolgepratik:kolgepratik@ds263408.mlab.com:63408/dbone
-
-    private final String DB_PASSWORD = "kolgepratik";
     private final String DB_NAME = "dbone";
-    private final String DB_HOST = "ds263408.mlab.com";
-    private final Integer DB_PORT = 63408;
-    private final String DB_USERNAME = "kolgepratik";
 
     @Autowired private Mongo mongo;
 
@@ -28,6 +22,7 @@ import org.springframework.data.mongodb.core.MongoClientFactoryBean;
     @Override public MongoClient mongoClient() {
         return (MongoClient) mongo;
     }
+<<<<<<< HEAD
 
     @Bean public MongoClientFactoryBean mongo() {
         MongoCredential credential = MongoCredential
@@ -40,4 +35,6 @@ import org.springframework.data.mongodb.core.MongoClientFactoryBean;
 
         return mongo;
     }
+=======
+>>>>>>> 39444378c243112b82405eff02c254ab7240709a
 }
