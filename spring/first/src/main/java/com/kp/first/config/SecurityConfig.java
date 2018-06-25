@@ -9,6 +9,13 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Configuration public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -17,8 +24,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
     @Override protected void configure(HttpSecurity http) throws Exception {
 
-        //securityOff(http);
-        securityOn(http);
+        securityOff(http);
+        //securityOn(http);
     }
 
     private void securityOn(HttpSecurity http) throws Exception {
@@ -31,7 +38,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
             .formLogin()
                 .loginPage("/login")
                 .failureUrl("/login")
-                .successForwardUrl("/")
+                .successHandler(new AuthenticationSuccessHandler() {
+                    @Override
+                    public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+                        httpServletResponse.sendRedirect("/first");
+                    }
+                })
                 .permitAll();
         //@formatter:on
     }

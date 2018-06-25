@@ -23,6 +23,23 @@ import java.util.List;
     private List<GrantedAuthority> authorities;
 
     private String firstName;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     private String lastName;
 
     public Customer() {
@@ -70,4 +87,8 @@ import java.util.List;
         return String
             .format("Customer[id=%s, firstName='%s', lastName='%s']", id, firstName, lastName);
     }
+
+
+
+
 }
