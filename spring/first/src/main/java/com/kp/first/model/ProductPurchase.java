@@ -1,6 +1,6 @@
 package com.kp.first.model;
 
-import com.kp.first.bean.GlobalBeanRepository;
+import com.kp.first.bean.SingletonBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE) public class ProductPurchase
     implements IBaseModel {
 
-    @Autowired private GlobalBeanRepository globalBeanRepository;
+    @Autowired private SingletonBeanFactory singletonBeanFactory;
 
     @Id private String id;
 

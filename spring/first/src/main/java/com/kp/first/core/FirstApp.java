@@ -1,6 +1,6 @@
 package com.kp.first.core;
 
-import com.kp.first.bean.GlobalBeanRepository;
+import com.kp.first.bean.SingletonBeanFactory;
 import com.kp.first.model.Customer;
 import com.kp.first.model.Order;
 import com.kp.first.model.ProductPurchase;
@@ -21,7 +21,7 @@ import java.util.List;
     extends SpringBootServletInitializer {
 
     static ApplicationContext ctx;
-    static GlobalBeanRepository globalBeanRepository;
+    static SingletonBeanFactory singletonBeanFactory;
 
     @Override protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(FirstApp.class);
@@ -34,7 +34,7 @@ import java.util.List;
 
         //printBeans();
 
-        globalBeanRepository = (GlobalBeanRepository) ctx.getBean("globalBeanRepository");
+        singletonBeanFactory = (SingletonBeanFactory) ctx.getBean("singletonBeanFactory");
 
         //testNewOrder();
 
@@ -44,13 +44,13 @@ import java.util.List;
     public static void testNewOrder() {
         Order order = new Order();
 
-        Customer customer = globalBeanRepository.customerRepository.findByUsername("kolgepratik");
+        Customer customer = singletonBeanFactory.customerRepository.findByUsername("kolgepratik");
 
         Collection<ProductPurchase> ppList = new ArrayList<>();
-        ProductPurchase pp = globalBeanRepository.beanMaker._newProductPurchase();
-        pp.setDetails(globalBeanRepository.productRepository.findByName("Mobile"), 2);
-        ProductPurchase pp2 = globalBeanRepository.beanMaker._newProductPurchase();
-        pp2.setDetails(globalBeanRepository.productRepository.findByName("Tablet"), 5);
+        ProductPurchase pp = singletonBeanFactory.beanInstanceMaker._newProductPurchase();
+        pp.setDetails(singletonBeanFactory.productRepository.findByName("Mobile"), 2);
+        ProductPurchase pp2 = singletonBeanFactory.beanInstanceMaker._newProductPurchase();
+        pp2.setDetails(singletonBeanFactory.productRepository.findByName("Tablet"), 5);
         ppList.add(pp);
         ppList.add(pp2);
 
@@ -58,11 +58,11 @@ import java.util.List;
 
         System.out.println("order: " + order);
 
-        globalBeanRepository.orderRepository.save(order);
+        singletonBeanFactory.orderRepository.save(order);
     }
 
     public static void testGetOrders() {
-        List<Order> orderList = globalBeanRepository.orderRepository.findAll();
+        List<Order> orderList = singletonBeanFactory.orderRepository.findAll();
 
         for (Order o : orderList) {
             System.out.println("Order: " + o);
