@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
     implements WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> {
 
     private final String CONTEXT_PATH = "/first";
-    private final Integer PORT_NUMBER = 8080;
+    private final Integer PORT_NUMBER = 8081;
 
     @Override public void customize(ConfigurableServletWebServerFactory factory) {
         factory.setContextPath(CONTEXT_PATH);

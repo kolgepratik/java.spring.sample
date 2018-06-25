@@ -91,6 +91,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+
             <!-- Required for junit to run -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -108,6 +109,41 @@
                         <version>5.2.0-M1</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+
+            <!-- This plugin is required to build angular project using maven. -->
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.3</version>
+                <configuration>
+                    <nodeVersion>v6.10.2</nodeVersion>
+                    <npmVersion>3.10.10</npmVersion>
+                    <workingDirectory>src/main/resources</workingDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>npm run build</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>run build</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

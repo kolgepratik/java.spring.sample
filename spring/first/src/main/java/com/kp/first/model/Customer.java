@@ -2,6 +2,7 @@ package com.kp.first.model;
 
 import com.kp.first.bean.SingletonBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,7 +13,8 @@ import org.springframework.stereotype.Component;
 import java.util.Collection;
 import java.util.List;
 
-@Scope(value = "prototype") @Component public class Customer implements UserDetails {
+@Component @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE) public class Customer
+    implements UserDetails {
 
     @Autowired private SingletonBeanFactory globalBeanRepository;
 

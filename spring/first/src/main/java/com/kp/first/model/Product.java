@@ -1,8 +1,11 @@
 package com.kp.first.model;
 
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.Id;
+import org.springframework.stereotype.Component;
 
-public class Product {
+@Component @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE) public class Product {
 
     @Id private String id;
 
@@ -11,6 +14,7 @@ public class Product {
     private Float cost;
 
     public Product() {
+        super();
     }
 
     public Product(String name, String description, Float cost) {
