@@ -2,12 +2,10 @@ package com.kp.first.junit;
 
 import com.kp.first.bean.SingletonBeanFactory;
 import com.kp.first.model.Customer;
-import junit.framework.Assert;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static java.time.Duration.ofMillis;
-import static java.time.Duration.ofMinutes;
 import static java.time.Duration.ofSeconds;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -67,7 +65,7 @@ public class FirstTest {
         // subsequent code in the same block will be skipped.
         assertAll("dependentAssertions",
                 () -> {
-                    Assert.assertNotNull(customer);
+                    assertNotNull(customer);
 
                     // Executed only if the previous assertion is valid.
                     assertAll("first name",
@@ -108,6 +106,7 @@ public class FirstTest {
     }
 
     @Test
+    @Disabled
     void timeoutExceededWithPreemptiveTermination() {
         // The following assertion fails with an error message similar to:
         // execution timed out after 10 ms

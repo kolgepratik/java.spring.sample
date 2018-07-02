@@ -18,12 +18,6 @@
 
     <dependencies>
         <!-- Compile-Time Dependencies -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Spring Data JPA -->
         <dependency>
@@ -67,6 +61,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <version>2.0.3.RELEASE</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -74,8 +74,11 @@
             <scope>test</scope>
         </dependency>
 
-
         <!-- Run-Time Dependencies -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>

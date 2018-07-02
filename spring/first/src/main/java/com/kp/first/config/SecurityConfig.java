@@ -23,9 +23,13 @@ import java.io.IOException;
     @Autowired private CustomerUserDetailsService customerUserDetailsService;
 
     @Override protected void configure(HttpSecurity http) throws Exception {
+        //securityOff(http);
+        securityOn(http);
 
-        securityOff(http);
-        //securityOn(http);
+        http
+            .headers()
+            .frameOptions().sameOrigin()
+            .httpStrictTransportSecurity().disable();
     }
 
     private void securityOn(HttpSecurity http) throws Exception {
@@ -41,7 +45,7 @@ import java.io.IOException;
                 .successHandler(new AuthenticationSuccessHandler() {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-                        httpServletResponse.sendRedirect("/first");
+                        httpServletResponse.sendRedirect("/first/app/home");
                     }
                 })
                 .permitAll();

@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
 
     @Override public void customize(ConfigurableServletWebServerFactory factory) {
         factory.setContextPath(CONTEXT_PATH);
-        factory.setPort(PORT_NUMBER);
+        //factory.setPort(PORT_NUMBER);
     }
 }

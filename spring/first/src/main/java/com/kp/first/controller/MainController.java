@@ -21,4 +21,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
         return "login";
     }
 
+    @GetMapping("/error") public String error() {
+        System.out.println("MainController: error(): GET");
+        return "error";
+    }
+
+    @GetMapping("/app/home") public String home() {
+        System.out.println("MainController: home(): GET");
+        return "home";
+    }
+
 }

@@ -1,8 +1,10 @@
 com\kp\first\controller\OrderRESTController.class
 com\kp\first\model\Product.class
+com\kp\first\junit\SampleFunctionality.class
 com\kp\first\core\FirstApp.class
 com\kp\first\controller\CustomerRESTController.class
 com\kp\first\bean\SingletonBeanFactory.class
+com\kp\first\bean\SingletonBeanFactoryBean.class
 com\kp\first\repository\OrderRepository.class
 com\kp\first\model\Order.class
 com\kp\first\service\CustomerUserDetailsService.class
@@ -13,7 +15,7 @@ com\kp\first\config\MongoDBConfig.class
 com\kp\first\impl\mongo\cascadesave\ACascadeSave.class
 util\AppUtil.class
 com\kp\first\model\IBaseModel.class
-com\kp\first\bean\BeanDefinition.class
+com\kp\first\config\MongoDBConfigBean.class
 com\kp\first\model\ProductPurchase.class
 com\kp\first\impl\mongo\cascadesave\CascadeFieldCallback.class
 com\kp\first\config\AppConfig.class
