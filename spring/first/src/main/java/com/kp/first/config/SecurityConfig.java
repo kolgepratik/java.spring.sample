@@ -45,6 +45,7 @@ import java.io.IOException;
                 .successHandler(new AuthenticationSuccessHandler() {
                     @Override
                     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+
                         httpServletResponse.sendRedirect("/first/app/home");
                     }
                 })

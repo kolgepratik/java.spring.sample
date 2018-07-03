@@ -1,6 +1,7 @@
 package com.kp.first.bean;
 
 import com.kp.first.repository.CustomerRepository;
+import com.kp.first.repository.CustomerSessionRepository;
 import com.kp.first.repository.OrderRepository;
 import com.kp.first.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
     @Autowired public PasswordEncoder passwordEncoder;
 
     @Autowired public CustomerRepository customerRepository;
+    @Autowired public CustomerSessionRepository customerSessionRepository;
     @Autowired public ProductRepository productRepository;
     @Autowired public OrderRepository orderRepository;
 

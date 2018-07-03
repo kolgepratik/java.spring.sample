@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.kp.first.junit.FirstTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 1.028 s - in com.kp.first.junit.FirstTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 1.046 s - in com.kp.first.junit.FirstTest

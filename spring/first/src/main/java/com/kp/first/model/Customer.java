@@ -90,7 +90,11 @@ import java.util.List;
             .format("Customer[id=%s, firstName='%s', lastName='%s']", id, firstName, lastName);
     }
 
+    public String getId() {
+        return id;
+    }
 
-
-
+    public void setId(String id) {
+        this.id = id;
+    }
 }

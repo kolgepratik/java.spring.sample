@@ -9,6 +9,7 @@ C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\config\MongoDBConfig.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\model\Order.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\repository\CustomerRepository.java
+C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\repository\CustomerSessionRepository.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\repository\ProductRepository.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\util\IConstants.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\controller\CustomerRESTController.java
@@ -17,6 +18,7 @@ C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\impl\mongo\cascadesave\CascadeFieldCallback.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\model\IBaseModel.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\junit\SampleFunctionality.java
+C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\model\CustomerSession.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\model\Product.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\repository\OrderRepository.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\controller\ProductRESTController.java
@@ -28,3 +30,4 @@ C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\config\SecurityConfig.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\controller\ICrudRESTController.java
 C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\bean\BeanInstanceMaker.java
+C:\Users\kolge\Documents\projects\workspaces\intellij\spring\spring\spring\first\src\main\java\com\kp\first\config\RedisConfig.java

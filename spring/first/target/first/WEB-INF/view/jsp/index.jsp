@@ -16,21 +16,16 @@
 <c:import url="header.jsp" />
 
 <br/>
+<iframe
+    name="frame-main"
+    src="/first/app/home"
+    style="min-height: 70%; width: 100%;"
+    frameBorder="0">
+</iframe>
+<br/>
 
-<div style="min-height: 80%; height: 80%">
-    <iframe
-        src="/first/app/home"
-        height="100%"
-        width="100%"
-        frameBorder="0">
-    </iframe>
-
-    <br/>
-
-    <c:import url="footer.jsp" />
-</div>
-
-
+<script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
+<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 
 </body>
 </html>

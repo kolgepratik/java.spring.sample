@@ -1,3 +1,4 @@
+com\kp\first\config\RedisConfig.class
 com\kp\first\controller\OrderRESTController.class
 com\kp\first\model\Product.class
 com\kp\first\junit\SampleFunctionality.class
@@ -7,8 +8,11 @@ com\kp\first\bean\SingletonBeanFactory.class
 com\kp\first\bean\SingletonBeanFactoryBean.class
 com\kp\first\repository\OrderRepository.class
 com\kp\first\model\Order.class
+com\kp\first\model\CustomerSession.class
 com\kp\first\service\CustomerUserDetailsService.class
 com\kp\first\controller\ICrudRESTController.class
+com\kp\first\config\RedisConfigBean.class
+com\kp\first\repository\CustomerSessionRepository.class
 com\kp\first\controller\ProductRESTController.class
 com\kp\first\repository\CustomerRepository.class
 com\kp\first\config\MongoDBConfig.class
