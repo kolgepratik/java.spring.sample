@@ -3,3 +3,4 @@
 *.war
 *workspace.xml
 *.applog
+target/*
