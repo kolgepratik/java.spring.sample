@@ -9,7 +9,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 public class RestTemplateRunner {
-    public static void main(String[] args) {
+    public static void mainCode(String[] args) {
         User user = null;
 
                 // Create a RestTemplate.
